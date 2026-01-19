@@ -442,17 +442,15 @@
     <!-- 添加弹窗和URL搜索参数处理脚本 -->
     <script src="js/index-page.js"></script>
 <script>
-// 自动修复豆瓣图片显示
-document.addEventListener('DOMNodeInserted', function() {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        if (img.src.includes('doubanio.com') && !img.src.includes('weserv.nl')) {
-            // 将原有的 proxy 路径或直接地址 替换为 weserv 代理
-            const originalUrl = img.src.split('/proxy/')[1] || img.src;
-            img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(decodeURIComponent(originalUrl));
-        }
-    });
-});
+// 终极海报修复：如果图片加载失败（418/403），自动尝试百度代理绕过防盗链
+document.addEventListener('error', function (e) {
+  var ele = e.target;
+  if (ele.tagName === 'IMG' && ele.src.includes('doubanio.com')) {
+    // 提取原始图片地址并使用百度搜索接口作为跳板
+    const originalUrl = ele.src.split('/proxy/')[1] || ele.src;
+    ele.src = 'https://image.baidu.com/search/down?url=' + originalUrl;
+  }
+}, true);
 </script>
 </body>
 </html>
