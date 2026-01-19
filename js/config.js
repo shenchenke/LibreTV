@@ -20,9 +20,9 @@ const SITE_CONFIG = {
     version: '1.0.3'
 };
 
+
 // API站点配置
 const API_SITES = {
-    const API_SITES = {
     lzi: {
         api: 'https://cj.lziapi.com/api.php/provide/vod/',
         name: '量子资源(4K)'
@@ -38,6 +38,14 @@ const API_SITES = {
     ffzy: {
         api: 'http://ffzy5.tv/api.php/provide/vod',
         name: '非凡影视'
+    },
+    tyyszy: {
+        api: 'https://tyyszy.com/api.php/provide/vod',
+        name: '天涯资源'
+    },
+    xiaomaomi: {
+        api: 'https://zy.xmm.hk/api.php/provide/vod',
+        name: '小猫咪资源'
     }
 };
     tyyszy: {
