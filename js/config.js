@@ -1,7 +1,5 @@
 // 全局常量配置
-const PROXY_URL = '/proxy/'; 
-// 新增：专门用于绕过豆瓣等图片防盗链的第三方代理
-const IMAGE_PROXY = 'https://images.weserv.nl/?url=';
+const PROXY_URL = '/proxy/';    // 适用于 Cloudflare, Netlify (带重写), Vercel (带重写)
 // const HOPLAYER_URL = 'https://hoplayer.com/index.html';
 const SEARCH_HISTORY_KEY = 'videoSearchHistory';
 const MAX_HISTORY_ITEMS = 5;
