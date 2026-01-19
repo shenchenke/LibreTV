@@ -45,7 +45,7 @@ const API_SITES = {
     },
     xiaomaomi: {
         api: 'https://zy.xmm.hk/api.php/provide/vod',
-        name: '小猫咪资源'
+        name: '猫咪资源'
     }
 };
 
