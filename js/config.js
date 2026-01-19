@@ -1,5 +1,5 @@
 // 全局常量配置
-const PROXY_URL = 'https://images.weserv.nl/?url=';
+const PROXY_URL = '/proxy/';
 // const HOPLAYER_URL = 'https://hoplayer.com/index.html';
 const SEARCH_HISTORY_KEY = 'videoSearchHistory';
 const MAX_HISTORY_ITEMS = 5;
